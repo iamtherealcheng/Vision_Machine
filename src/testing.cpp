@@ -1,16 +1,14 @@
 #include <opencv2/highgui.hpp>
 #include <iostream>
+using namespace std;
+using namespace cv;
 int main( int argc, char** argv )
 {
-    cv::Mat image;
-    image = cv::imread("Lena.png",cv::IMREAD_COLOR);
-    if(! image.data)
-        {
-            std::cout<<"Could not open file" << std::endl;
-            return -1;
-        }
-    cv::namedWindow("namba image", cv::WINDOW_AUTOSIZE);
-    cv::imshow("namba image", image);
+    Mat image;
+    image = imread("Lena.png",IMREAD_COLOR);
+  
+    namedWindow("n1", WINDOW_AUTOSIZE);
+    imshow("n1", image);
     cv::waitKey(0);
     return 0;
 }
