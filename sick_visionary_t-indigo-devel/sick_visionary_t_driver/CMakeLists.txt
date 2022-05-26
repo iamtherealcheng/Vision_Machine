@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 2.8.3)
-project(sick_visionary_t_driver)
+cmake_minimum_required(VERSION 2.8.3)// phiên bản tối thiểu của cmake
+project(sick_visionary_t_driver)// sử dụng project() lệnh đặt tên dự án
 
 find_package(catkin REQUIRED COMPONENTS
   cv_bridge
@@ -22,12 +22,12 @@ include_directories(
   include
 )
 
-add_executable(sick_visionary_t_driver_node src/node.cpp src/driver.cpp)
+add_executable(sick_visionary_t_driver_node src/node.cpp src/driver.cpp)// thêm tệp thực thi
 
 target_link_libraries(sick_visionary_t_driver_node
   ${catkin_LIBRARIES}
   ${OpenCV_LIBS}
-)
+)// thêm vào đườn dẫn cho các tệp thư viện
 
 ### TEST ###
 if(CATKIN_ENABLE_TESTING)
